@@ -162,7 +162,7 @@ class phpinterface_fpm {
 	 */
 	public function createConfig($phpconfig) {
 
-		$fh = @fopen($this->getConfigFile(), 'w');
+		$fh = @fopen($this->getConfigFile($phpconfig), 'w');
 
 		if ($fh) {
 			$fpm_pm = Settings::Get('phpfpm.pm');
