@@ -3617,3 +3617,16 @@ if (isDatabaseVersion('201704100')) {
 
 	updateToDbVersion('201705050');
 }
+
+if (isDatabaseVersion('201705050')) {
+	showUpdateStep("Add PHP-FPM configdir-option");
+	Database::query("ALTER TABLE `".TABLE_PANEL_PHPCONFIGS."` ADD `configdir` varchar(255) NOT NULL default '' AFTER `binary`;");
+	lastStepStatus(0);
+	updateToDbVersion('201708081');
+}
+if (isDatabaseVersion('201708081')) {
+	showUpdateStep("Add PHP-FPM runscript-option");
+	Database::query("ALTER TABLE `".TABLE_PANEL_PHPCONFIGS."` ADD `runscript` varchar(255) NOT NULL default '' AFTER `configdir`;");
+	lastStepStatus(0);
+	updateToDbVersion('201708082');
+}

@@ -2066,6 +2066,11 @@ $lng['admin']['domain_hsts_preload']['description'] = 'If you would like this do
 $lng['serversettings']['nginx_http2_support']['title'] = 'Nginx HTTP2 Support';
 $lng['serversettings']['nginx_http2_support']['description'] = 'enable http2 support for ssl. ENABLE ONLY IF YOUR Nginx SUPPORT THIS FEATURE. (version 1.9.5+)';
 
+$lng['admin']['phpsettings']['configdir']['title'] = 'Configuration directory';
+$lng['admin']['phpsettings']['configdir']['description'] = 'Directory which contains the php-fpm configurations. If empty the default directory will be selected';
+$lng['admin']['phpsettings']['runscript']['title'] = 'FPM init-script';
+$lng['admin']['phpsettings']['runscript']['description'] = 'Specify the init-script without parameters, e.g. <strong>"/etc/init.d/php7-fpm"</strong>';
+
 $lng['error']['noipportgiven'] = 'No IP/port given';
 
 // Added in froxlor 0.9.38.8
