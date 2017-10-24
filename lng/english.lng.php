@@ -2063,13 +2063,15 @@ $lng['admin']['domain_hsts_incsub']['description'] = 'The optional "includeSubDo
 $lng['admin']['domain_hsts_preload']['title'] = 'Include domain in <a href="https://hstspreload.appspot.com/" target="_blank">HSTS preload list</a>';
 $lng['admin']['domain_hsts_preload']['description'] = 'If you would like this domain to be included in the HSTS preload list maintained by Chrome (and used by Firefox and Safari), then use activate this.<br>Sending the preload directive from your site can have PERMANENT CONSEQUENCES and prevent users from accessing your site and any of its subdomains.<br>Please read the details at <a href="https://hstspreload.appspot.com/#removal" target="_blank">hstspreload.appspot.com/#removal</a> before sending the header with "preload".';
 
-$lng['serversettings']['nginx_http2_support']['title'] = 'Nginx HTTP2 Support';
-$lng['serversettings']['nginx_http2_support']['description'] = 'enable http2 support for ssl. ENABLE ONLY IF YOUR Nginx SUPPORT THIS FEATURE. (version 1.9.5+)';
-
 $lng['admin']['phpsettings']['configdir']['title'] = 'Configuration directory';
 $lng['admin']['phpsettings']['configdir']['description'] = 'Directory which contains the php-fpm configurations. If empty the default directory will be selected';
 $lng['admin']['phpsettings']['runscript']['title'] = 'FPM init-script';
 $lng['admin']['phpsettings']['runscript']['description'] = 'Specify the init-script without parameters, e.g. <strong>"/etc/init.d/php7-fpm"</strong>';
+
+$lng['serversettings']['http2_support']['title'] = 'HTTP2 Support';
+$lng['serversettings']['http2_support']['description'] = 'enable HTTP2 support for ssl.<br><em class="red">ENABLE ONLY IF YOUR WEBSERVER SUPPORTS THIS FEATURE (nginx version 1.9.5+, apache2 version 2.4.17+)</em>';
+$lng['admin']['testmail'] = 'SMTP test';
+$lng['success']['testmailsent'] = 'Test mail sent successfully';
 
 $lng['error']['noipportgiven'] = 'No IP/port given';
 

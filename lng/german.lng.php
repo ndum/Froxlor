@@ -1719,9 +1719,6 @@ $lng['admin']['phpsettings']['configdir']['description'] = 'Pfad welcher die php
 $lng['admin']['phpsettings']['runscript']['title'] = 'FPM Init-Script';
 $lng['admin']['phpsettings']['runscript']['description'] = 'Init-Script ohne Parameter angeben, z.B. <strong>"/etc/init.d/php7-fpm"</strong>';
 
-$lng['serversettings']['nginx_http2_support']['title'] = 'Nginx HTTP2 Unterstützung';
-$lng['serversettings']['nginx_http2_support']['description'] = 'Aktiviere http2 Unterstützung für SSL. NUR AKTIVIEREN, WENN nginx DIESE FUNKTION UNTERSTÜTZT (version 1.9.5+)';
-
 $lng['error']['noipportgiven'] = 'Keine IP/Port angegeben';
 
 // Added in froxlor 0.9.38.8
@@ -1732,3 +1729,9 @@ $lng['serversettings']['ssl']['apache24_ocsp_cache_path']['title'] = 'Apache 2.4
 $lng['serversettings']['ssl']['apache24_ocsp_cache_path']['description'] = 'Konfiguriert den Cache-Pfad zum Zwischenspeichern der OCSP-Antworten,<br />die an TLS-Handshakes angehängt werden.';
 $lng['serversettings']['nssextrausers']['title'] = 'Verwende libnss-extrausers anstatt libnss-mysql';
 $lng['serversettings']['nssextrausers']['description'] = 'Lese Benutzer nicht direkt aus der Datenbank sondern über Dateien, bitte nur aktivieren, wenn die entsprechende Konfiguration vorgenommen wurde (System -> libnss-extrausers).<br><strong class="red">Nur für Debian/Ubuntu (oder wenn libnss-extrausers manuell kompiliert wurde!)</strong>';
+
+$lng['admin']['domain_http2']['title'] = 'HTTP2 Unterstützung';
+$lng['admin']['domain_http2']['description'] = 'Siehe <a target="_blank" href="https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol#HTTP.2F2">Wikipedia</a> für eine ausführliche Beschreibung von HTTP2';
+
+$lng['admin']['testmail'] = 'SMTP Test';
+$lng['success']['testmailsent'] = 'Test E-Mail erfolgreich gesendet';

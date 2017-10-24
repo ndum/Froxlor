@@ -3630,3 +3630,17 @@ if (isDatabaseVersion('201708081')) {
 	lastStepStatus(0);
 	updateToDbVersion('201708082');
 }
+
+if (isDatabaseVersion('201708082')) {
+	showUpdateStep("Updating HTTP2 setting");
+	if (Settings::Get('system.nginx_http2_support') != null) {
+		Database::query("UPDATE `" . TABLE_PANEL_SETTINGS . "` SET `varname` = 'http2_support' WHERE `varname` = 'nginx_http2_support';");
+	} else {
+		Settings::AddNew('system.http2_support', 0);
+	}
+	lastStepStatus(0);
+	showUpdateStep("Adding domain field for HTTP2 stapling");
+	Database::query("ALTER TABLE `" . TABLE_PANEL_DOMAINS . "` ADD `http2` TINYINT(1) NOT NULL DEFAULT '0';");
+	lastStepStatus(0);
+	updateToDbVersion('201710250');
+}
