@@ -436,7 +436,7 @@ class apache extends HttpConfigBase
 						} else {
 
 							$this->virtualhosts_data[$vhosts_filename] .= ' SSLEngine On' . "\n";
-							$this->virtualhosts_data[$vhosts_filename] .= ' SSLProtocol -ALL +TLSv1 +TLSv1.2' . "\n";
+							$this->virtualhosts_data[$vhosts_filename] .= ' SSLProtocol ALL -SSLv2 -SSLv3' . "\n";
 							if (Settings::Get('system.apache24') == '1') {
 								$this->virtualhosts_data[$vhosts_filename] .= ' SSLCompression Off' . "\n";
 							}
@@ -871,7 +871,7 @@ class apache extends HttpConfigBase
 
 			if ($domain['ssl_cert_file'] != '') {
 				$vhost_content .= '  SSLEngine On' . "\n";
-				$vhost_content .= '  SSLProtocol -ALL +TLSv1 +TLSv1.2' . "\n";
+				$vhost_content .= '  SSLProtocol ALL -SSLv2 -SSLv3' . "\n";
 				if (Settings::Get('system.apache24') == '1') {
 					$vhost_content .= '  SSLCompression Off' . "\n";
 				}
