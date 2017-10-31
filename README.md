@@ -1,7 +1,11 @@
 # Froxlor
 
-The server administration software for your needs.
-Developed by experienced server administrators, this panel simplifies the effort of managing your hosting platform.
+## Attention - This an unofficial Fork!!!
+
+### Changes
+ 1. Support for multiple PHP versions - also with **PHP-FPM** support (selectable)
+ 2. All official Froxlor Commits summarized until October 2017
+ 3. Other small/minor improvements... more will follow
 
 ## Installation
 
